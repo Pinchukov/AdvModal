@@ -1,4 +1,4 @@
-import modal from './modal-pin.js';
+import modal from './modal.js';
 
 
 import './css/style.css';

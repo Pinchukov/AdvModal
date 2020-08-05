@@ -1,43 +1,87 @@
 
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modal-Pin</title>
+    <title>Modal One</title>
     <link rel="stylesheet" href="dist/styles.css">
 </head>
 <body>
 
-<button class="btn-pin-open modal-1">Open Modal 1</button>
-<button class="btn-pin-open modal-2">Open Modal 2</button>
+<a class="btn-open modal-1" href="#" title="Open Modal 1">Open Modal 1</a>
+<button class="btn-open modal-2">Open Modal 2</button>
+<button class="btn-open modal-3">Open Modal 3</button>
+<button class="btn-open modal-4">Open Modal 4</button>
 
-<div class="modal-pin-container modal-1">
-    <div class="modal-pin">
-        <div class="modal-pin-header">
-            <span class="close-pin">&times;</span>
-            <h6>Title Modal 1</h6>
+<div class="modal-container modal-1">
+    <div class="modal">
+        <div class="modal-header">
+            <span class="modal-close">&times;</span>
+            <h6>Hello My Friend ;)</h6>
           </div>
-          <div class="modal-pin-body">
-              <p>1111 1111 1111 1111 1111</p>
+          <div class="modal-body">
+            <form>
+                <div><input type="text" name="name" placeholder="Name" required></div>
+                <div><input type="text" name="phone" placeholder="Phone" required></div>
+                <div><textarea rows="5" name="text" placeholder="Message" required></textarea></div>
+                <button type="submit" name="submit">Send</button>
+            </form>
           </div>
-          <div class="modal-pin-footer">
+          <div class="modal-footer">
             <small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
         </div>
     </div>
 </div>
 
 
-<div class="modal-pin-container modal-2">
-    <div class="modal-pin">
-        <div class="modal-pin-header">
-            <span class="close-pin">&times;</span>
-            <h6>Title Modal 2</h6>
+<div class="modal-container modal-2">
+    <div class="modal">
+        <div class="modal-header">
+            <span class="modal-close">&times;</span>
+            <h6>Hi my friend, do you like sandwiches? ;)</h6>
           </div>
-          <div class="modal-pin-body">
+          <div class="modal-body">
               <p>2222 2222 2222 2222 2222</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis fugit totam aliquid sint placeat odio mollitia laudantium facere accusantium, id molestias fugiat dolores ea ipsam necessitatibus facilis quaerat molestiae! Dolore?</p>
           </div>
-          <div class="modal-pin-footer">
+          <div class="modal-footer">
+            <small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
+        </div>
+    </div>
+</div>
+
+<div class="modal-container modal-3">
+    <div class="modal">
+        <div class="modal-header">
+            <span class="modal-close">&times;</span>
+            <h6>Hi my friend, are we going to the pub today?</h6>
+          </div>
+          <div class="modal-body">
+            <form>
+                <div><input type="text" name="name" placeholder="Name" required></div>
+                <div><input type="text" name="phone" placeholder="Phone" required></div>
+                <div><textarea rows="5" name="text" placeholder="Message" required></textarea></div>
+                <button type="submit" name="submit">Send</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
+        </div>
+    </div>
+</div>
+
+<div class="modal-container modal-4">
+    <div class="modal">
+        <div class="modal-header">
+            <span class="modal-close">&times;</span>
+            <h6>Hi my friend, today is a great day!</h6>
+          </div>
+          <div class="modal-body">
+              <p>4444 4444 4444 4444 4444</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis fugit totam aliquid sint placeat odio mollitia laudantium facere accusantium, id molestias fugiat dolores ea ipsam necessitatibus facilis quaerat molestiae! Dolore?</p>
+          </div>
+          <div class="modal-footer">
             <small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
         </div>
     </div>

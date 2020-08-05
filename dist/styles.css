@@ -1,7 +1,7 @@
 /*-----------------------*/
 /* Modal Pin */
 /*-----------------------*/
-.modal-pin-container {
+.modal-container {
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   z-index: 999999999;
@@ -12,10 +12,10 @@
   overflow: auto;
   display: none;
 }
-.modal-pin-display-block {
+.modal-display-block {
   display: block;
 }
-.modal-pin {
+.modal {
   position: relative;
   width: 640px;
   background-color: #fff;
@@ -23,30 +23,31 @@
   animation-name: animatetop;
   animation-duration: 0.4s;
 }
-.modal-pin-header {
-  padding: 20px;
+.modal-header {
   background-color: #ededed;
+  padding: 0 20px;
+  line-height: 50px;
 }
-.close-pin {
+.modal-container .modal-close {
   cursor: pointer;
   position: absolute;
   top: 0px;
   right: 20px;
-  font-size: 3rem;
+  font-size: 40px;
 }
-.modal-pin-header h6 {
+.modal-header h6 {
   font-size: 18px;
   margin: 0;
   padding: 0;
 }
-.modal-pin-body {
+.modal-body {
   padding: 0 20px;
 }
-.modal-pin-footer {
+.modal-footer {
   padding: 10px 20px;
   background-color: #ededed;
 }
-.modal-pin-footer small {
+.modal-footer small {
   font-weight: bold;
 }
 @-webkit-keyframes animatetop {

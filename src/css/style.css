@@ -1,7 +1,13 @@
+
+body {
+  background-color: #0098ba;
+}
+
+
 /*-----------------------*/
-/* Modal Pin */
+/* Style Modal */
 /*-----------------------*/
-.modal-pin-container {
+.modal-container {
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   z-index: 999999999;
@@ -12,42 +18,69 @@
   overflow: auto;
   display: none;
 }
-.modal-pin-display-block {
+.modal-display-block {
   display: block;
 }
-.modal-pin {
+.modal {
   position: relative;
   width: 640px;
+  max-width: 90%;
   background-color: #fff;
   margin: 10% auto;
   animation-name: animatetop;
   animation-duration: 0.4s;
+  border: 5px solid #ccc;
 }
-.modal-pin-header {
-  padding: 20px;
+.modal-header {
   background-color: #ededed;
+  padding: 20px 40px;
+  line-height: 50px;
 }
-.close-pin {
+.modal-container .modal-close {
   cursor: pointer;
   position: absolute;
   top: 0px;
   right: 20px;
-  font-size: 3rem;
+  font-size: 50px;
+  font-weight: bold;
+  color: #f00;
 }
-.modal-pin-header h6 {
+.modal-header h6 {
   font-size: 18px;
   margin: 0;
   padding: 0;
+  line-height: 1.5;
+  text-transform: uppercase;
 }
-.modal-pin-body {
-  padding: 0 20px;
+.modal-body {
+  padding: 20px 40px;
 }
-.modal-pin-footer {
-  padding: 10px 20px;
+.modal-footer {
+  padding: 10px 40px;
   background-color: #ededed;
 }
-.modal-pin-footer small {
+.modal-footer small {
   font-weight: bold;
+}
+
+/* Background Color Style */
+.background-black {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.background-white {
+  background-color: rgba(225, 225, 225, 0.7);
+}
+
+
+
+/*-----------------------*/
+/* Animation */
+/*-----------------------*/
+
+/* Animation Top */
+.animationTop {
+  animation-name: animatetop;
+  animation-duration: 0.4s;
 }
 @-webkit-keyframes animatetop {
   from {top:-300px; opacity:0} 
@@ -56,4 +89,76 @@
 @keyframes animatetop {
   from {top:-300px; opacity:0}
   to {top:0; opacity:1}
+}
+
+/* Animation Bottom */
+.animationBottom {
+  animation-name: animatebottom;
+  animation-duration: 0.5s;
+}
+@-webkit-keyframes animatebottom {
+  from {bottom:-300px; opacity:0} 
+  to {bottom:0; opacity:1}
+}
+@keyframes animatebottom {
+  from {bottom:-300px; opacity:0}
+  to {bottom:0; opacity:1}
+}
+
+/* Animation Right */
+.animationRight {
+  animation-name: animateright;
+  animation-duration: 0.5s;
+}
+@-webkit-keyframes animatebottom {
+  from {right:-300px; opacity:0} 
+  to {right:0; opacity:1}
+}
+@keyframes animateright {
+  from {right:-300px; opacity:0}
+  to {right:0; opacity:1}
+}
+
+/* Animation Left*/
+.animationLeft {
+  animation-name: animateleft;
+  animation-duration: 0.5s;
+}
+@-webkit-keyframes animateleft {
+  from {left:-300px; opacity:0} 
+  to {left:0; opacity:1}
+}
+@keyframes animateleft {
+  from {left:-300px; opacity:0}
+  to {left:0; opacity:1}
+}
+
+
+
+/*-----------------------*/
+/* Custom Style Form */
+/*-----------------------*/
+.modal form {
+  margin: 10px 0;
+}
+.modal form div {
+  margin: 20px 0;
+  padding: 15px;
+  border: 1px solid #ccc;
+}
+.modal form input, textarea {
+  border: none;
+  width: 100%;
+  font-size: 16px;
+  padding: 0;
+  outline: 0;
+}
+.modal form button {
+  border: none;
+  width: 100%;
+  font-size: 16px;
+  padding: 15px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
 }
