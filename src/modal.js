@@ -1,12 +1,12 @@
 window.addEventListener('load', function(){
 
     // "new Modal" - simple mode
-    new Modal({elem: '.modal-1'});
-    new Modal({elem: '.modal-2'});
+    new Modal({className: '.modal-1'});
+    new Modal({className: '.modal-2'});
 
   /*
   "new AdvModal" - advanced mode
-       elem: - className
+       className: - className
        width: - any width of the container, by default 640px
        bg: - options: background-black , background-white . by default, the active class: background-black
        indentY: - An arbitrary offset from the top edge of the page, the default offset is equal: 10%
@@ -14,14 +14,14 @@ window.addEventListener('load', function(){
    */
 
     new AdvModal({
-        elem: '.modal-3',
+        className: '.modal-3',
         width: '500px',
         indentY: '5%',
         bg: 'background-black',
         effect: 'animationRight'
     });
     const mAdv_1 = new AdvModal({ 
-        elem: '.modal-4',
+        className: '.modal-4',
         bg: 'background-white',
         effect: 'animationLeft'
     });
@@ -36,46 +36,46 @@ window.addEventListener('load', function(){
 
 
 class Modal {
-    constructor(elem) {
-        this.elem = elem;
-        this.elems = document.querySelector(this.elem.elem);
-        this.modal = document.querySelector(`.modal-container${this.elem.elem}`);
+    constructor(className) {
+        this.className = className;
+        this.classNames = document.querySelector(this.className.className);
+        this.modal = document.querySelector(`.modal-container${this.className.className}`);
         // 56.37
-        this.db = 'modal-display-block';
-        this.elems.addEventListener('click', () => this.open());
+        this.displayBlock = 'modal-display-block';
+        this.classNames.addEventListener('click', () => this.open());
         this.modal.addEventListener('click', (e) => this.close(e));
     }
     open() {
-        this.modal.classList.add(this.db);
+        this.modal.classList.add(this.displayBlock);
     }
     close(e) {
         if(e.target.classList.contains('modal-close')){
-             this.modal.classList.remove(this.db);
+             this.modal.classList.remove(this.displayBlock);
         }
         if(e.target.classList.contains('modal-container')){
-            this.modal.classList.remove(this.db);
+            this.modal.classList.remove(this.displayBlock);
         }  
     }
 }
 
 
 class AdvModal extends Modal {
-    constructor(elem) {
+    constructor(className) {
         let defaults = {
             width: '640px',
             indentY: '10%',
             bg: 'background-black',
             effect: 'animatetop'
         };
-        let op = Object.assign({}, defaults, elem);
+        let op = Object.assign({}, defaults, className);
         super(op);
         this.adds()
     }
     adds() {
-        this.modal.children[0].style.width = this.elem.width;
-        this.modal.children[0].style.marginTop = this.elem.indentY;
-        this.modal.classList.add(this.elem.bg);
-        this.modal.children[0].classList.add(this.elem.effect);
+        this.modal.children[0].style.width = this.className.width;
+        this.modal.children[0].style.marginTop = this.className.indentY;
+        this.modal.classList.add(this.className.bg);
+        this.modal.children[0].classList.add(this.className.effect);
     }
 }
 
